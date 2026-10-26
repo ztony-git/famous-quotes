@@ -42,5 +42,7 @@ public class FamousQuotes {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
+
+        scanner.close();
     }
 }
