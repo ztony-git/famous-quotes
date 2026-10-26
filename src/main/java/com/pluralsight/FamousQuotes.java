@@ -21,27 +21,23 @@ public class FamousQuotes {
         Scanner scanner = new Scanner(System.in);
         String in;
 
-        try {
-            do {
-                System.out.print("Please enter a number between 1 and 10 (exit, random): ");
-                in = scanner.nextLine();
+        do {
+            System.out.print("Please enter a number between 1 and 10 (exit, random): ");
+            in = scanner.nextLine();
 
-                if(in.equals("exit")) {
-                    break;
-                } else if (in.equals("random")) {
-                    System.out.println(quotes[(int) (Math.random() * quotes.length)]);
-                } else {
-                    try {
-                        int num = Integer.parseInt(in);
-                        System.out.println(quotes[num - 1]);
-                    } catch (Exception e) {
-                        System.out.println(e.getMessage());
-                    }
+            if(in.equals("exit")) {
+                break;
+            } else if (in.equals("random")) {
+                System.out.println(quotes[(int) (Math.random() * quotes.length)]);
+            } else {
+                try {
+                    int num = Integer.parseInt(in);
+                    System.out.println(quotes[num - 1]);
+                } catch (Exception e) {
+                    System.out.println(e.getMessage());
                 }
-            } while (!in.equalsIgnoreCase("exit"));
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
+            }
+        } while (!in.equalsIgnoreCase("exit"));
 
         scanner.close();
     }
